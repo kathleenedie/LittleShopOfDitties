@@ -1,0 +1,2 @@
+public class ShoapTest {
+}
