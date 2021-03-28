@@ -27,4 +27,21 @@ public class ShoapTest {
     public void hasInitialEmptyStockList(){
         assertEquals(0, shop.getStock().size());
     }
+
+    @Test
+    public void canAddStockItems(){
+        shop.addStockItem(guitar);
+        shop.addStockItem(recorder);
+        shop.addStockItem(beaters);
+        assertEquals(3, shop.getStock().size());
+    }
+
+    @Test
+    public void canRemoveStockItems(){
+        shop.addStockItem(guitar);
+        shop.addStockItem(recorder);
+        shop.addStockItem(beaters);
+        shop.removeStockItem(beaters);
+        assertEquals(2, shop.getStock().size());
+    }
 }
